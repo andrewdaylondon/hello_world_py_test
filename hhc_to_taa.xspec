@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../hhc_to_taa.xsl">
+    <x:scenario label="Scenario for testing the smart element">
+        <x:context>
+            <smart id="blahblah">...</smart>
+        </x:context>
+        <x:expect label="The smart element should transform to smart element" test="count(/smart) = 1"/>
+        <x:expect label="The whole thing should look like this">
+            <smart>...</smart>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing the metadata element">
+        <x:context>
+            <metadata id="blahblah">...</metadata>
+        </x:context>
+        <x:expect label="The metadata element should transform to metadata element" test="count(/metadata) = 1"/>
+        <x:expect label="The whole thing should look like this">
+            <metadata>...</metadata>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing the section element">
+        <x:context>
+            <section id="blahblah">...</section>
+        </x:context>
+        <x:expect label="The section element should transform to section element" test="count(/section) = 1"/>
+        <x:expect label="The whole thing should look like this">
+            <section>...</section>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing the title element">
+        <x:context>
+            <title >...</title>
+        </x:context>
+        <x:expect label="The title element should transform to title element" test="true()"/>
+        <x:expect label="The whole thing should look like this">
+            <title>...</title>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing the gold-topic transforms into the generic-commentary-topic element">
+        <x:context>
+            <gold-topic id="blahblah">...</gold-topic>
+        </x:context>
+        <x:expect label="The gold-topic element should transform to generic-commentary-topic element" test="count(/generic-commentary-topic) = 1"/>
+        <x:expect label="The whole thing should look like this">
+            <generic-commentary-topic>...</generic-commentary-topic>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing the quickfacts transforms into the body-leaf/quickfacts element">
+        <x:context>
+            <quickfacts>...</quickfacts>
+        </x:context>
+        <x:expect label="The gold-topic element should transform to generic-commentary-topic element" test="count(/body-leaf/quickfacts) = 1"/>
+        <x:expect label="The whole thing should look like this">
+            <body-leaf><quickfacts>...</quickfacts></body-leaf>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing the indepth transforms into the body-node/indepth element">
+        <x:context>
+            <indepth>...</indepth>
+        </x:context>
+        <x:expect label="The indepth element should transform to body-node/indepth element" test="count(/body-node/indepth) = 1"/>
+        <x:expect label="The whole thing should look like this">
+            <body-node><indepth>...</indepth></body-node>
+        </x:expect>
+    </x:scenario>
+</x:description>
