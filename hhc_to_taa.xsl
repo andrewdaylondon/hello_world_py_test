@@ -6,8 +6,6 @@
     version="2.0">
     
     <xsl:output method="xml" omit-xml-declaration="no" indent="yes" doctype-public="-//Croner//DTD Smart Gold 0401//EN" doctype-system="smart.dtd"/>
-    
-    
     <xsl:include href="xslt-modules/Smart-XML-Level-to-Smart-XML-Body-Node.xsl"/>  
     
     <xsl:template match="/">
