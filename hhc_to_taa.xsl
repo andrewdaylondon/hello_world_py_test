@@ -5,8 +5,7 @@
     exclude-result-prefixes="xs"
     version="2.0">
     
-    <xsl:output method="xml" omit-xml-declaration="no" indent="yes" doctype-public="-//Croner//DTD Smart Gold 0401//EN" doctype-system="smart.dtd"/>
-    
+    <xsl:output method="xml" omit-xml-declaration="no" indent="yes" doctype-public="-//Croner//DTD Smart Gold 0401//EN" doctype-system="smart.dtd"/>    
     <xsl:template match="/">
         <xsl:variable name="pass-one" as="element(smart)">
             <xsl:apply-templates mode="Generate-Smart-XML"/>    
