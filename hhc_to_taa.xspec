@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../hhc_to_taa.xsl">
     <x:scenario label="Scenario for testing the smart element">
         <x:context>
